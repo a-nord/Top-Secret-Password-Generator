@@ -10,43 +10,47 @@ var lowerCasedCharacters = ['a','b','c','d','e','f','g','h','i','j','k','l','m',
 // Array of uppercase characters to be included in password
 var upperCasedCharacters = ['A','B','C','D','E','F','G','H','I','J','K','L','M','N','O','P','Q','R','S','T','U','V','W','X','Y','Z',];
 
-// // Concatenate arrays
-// possibleCharacters.concat(specialCharacters)
+// // Array to store types of characters to include in password
+var possibleCharacters = [];
 
 // `if` conditional logic for possibleOptions
 function generatePassword() {
   //Length criteria
-  var passwordLength = prompt("How many characters between 8 - 128 in digits would you like your password to be?")
+  var passwordLength = prompt("How many characters between 8 - 128 in digits would you like your password to be?");
   if (passwordLength >= 8 && passwordLength <= 128) { 
     console.log(passwordLength)
     //boolean variables for the next set of questions to add password criterias
     var confirmSpecial = confirm("Click OK if you want to include special characters.");    
     var confirmNumeric = confirm("Click OK if you want to include numeric characters.");
     var confirmLowercase = confirm("Click OK if you want to include lowercase characters.");
-    var confirmUppercase = confirm("Click OK if you want to include uppercase characters.");
-
+    var confirmUppercase = confirm("Click OK if you want to include uppercase characters.");    
     //user must choose atleast one of the criterias
-    if (confirmSpecial) {
+    if (confirmUppercase) {
+    }else if (confirmSpecial) {
     }else if (confirmNumeric) {
     }else if (confirmLowercase) {
-    }else if (confirmUppercase) {
     }else {
       alert("Must have atleast one password criteria.")
       generatePassword()
     };
-
-  } else {
+    //-----------------------------------------------------------------------------------------------------//
+    // do not add these characters if you press cancel    
+    if (confirmSpecial) {
+      possibleCharacters = possibleCharacters.concat(specialCharacters)
+    } 
+    if (confirmNumeric) {
+      possibleCharacters = possibleCharacters.concat(numericCharacters)
+    } 
+    if (confirmLowercase) {
+      possibleCharacters = possibleCharacters.concat(lowerCasedCharacters)
+    } 
+    if (confirmUppercase) {
+      possibleCharacters = possibleCharacters.concat(upperCasedCharacters)
+    };
+    } else {
     alert("Must be a value between 8 - 128.")
     generatePassword()
   } ;  
-
-  // // Array to store result 
-  // var result = [];
-  // // Array to store types of characters to include in password
-  // var possibleCharacters = [];
-  // // Array to contain one of each type of chosen character to ensure each will be used
-  // var guaranteedCharacters = [];
-  
 }
 
 // Get references to the #generate element
