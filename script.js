@@ -18,8 +18,12 @@ function generatePassword() {
   //Length criteria
   var passwordLength = prompt("How many characters between 8 - 128 in digits would you like your password to be?")
   if (passwordLength >= 8 && passwordLength <= 128) { 
-    //boolean variables for the next questions    
     console.log(passwordLength)
+    //boolean variables for the next set of questions to add password criterias
+    var confirmSpecial = confirm("Click OK if you want to include special characters.");    
+    var confirmNumeric = confirm("Click OK if you want to include numeric characters.");
+    var confirmLowercase = confirm("Click OK if you want to include lowercase characters.");
+    var confirmUppercase = confirm("Click OK if you want to include uppercase characters.");
   } else {
     alert("Must be a value between 8 - 128.")
     generatePassword()
