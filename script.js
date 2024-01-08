@@ -24,14 +24,21 @@ function generatePassword() {
     var confirmNumeric = confirm("Click OK if you want to include numeric characters.");
     var confirmLowercase = confirm("Click OK if you want to include lowercase characters.");
     var confirmUppercase = confirm("Click OK if you want to include uppercase characters.");
+
+    //user must choose atleast one of the criterias
+    if (confirmSpecial) {
+    }else if (confirmNumeric) {
+    }else if (confirmLowercase) {
+    }else if (confirmUppercase) {
+    }else {
+      alert("Must have atleast one password criteria.")
+      generatePassword()
+    };
+
   } else {
     alert("Must be a value between 8 - 128.")
     generatePassword()
   } ;  
-
-  //other password criterias
-  
-
 
   // // Array to store result 
   // var result = [];
