@@ -10,44 +10,32 @@ var lowerCasedCharacters = ['a','b','c','d','e','f','g','h','i','j','k','l','m',
 // Array of uppercase characters to be included in password
 var upperCasedCharacters = ['A','B','C','D','E','F','G','H','I','J','K','L','M','N','O','P','Q','R','S','T','U','V','W','X','Y','Z',];
 
-// Array to store result 
-var result = [];
-
-// Array to store types of characters to include in password
-var possibleCharacters = [];
-
-// Array to contain one of each type of chosen character to ensure each will be used
-var guaranteedCharacters = [];
-
-////length of password
-var passwordLength=0;
-
-// Concatenate arrays
-possibleCharacters.concat(specialCharacters)
+// // Concatenate arrays
+// possibleCharacters.concat(specialCharacters)
 
 // `if` conditional logic for possibleOptions
-function generatePassword(){
-  result = [];
-  passwordLength = parseInt(prompt("How many characters between 8 - 128 do you want your password to be?"));
+function generatePassword() {
+  //Length criteria
+  var passwordLength = prompt("How many characters between 8 - 128 in digits would you like your password to be?")
+  if (passwordLength >= 8 && passwordLength <= 128) { 
+    //boolean variables for the next questions    
+    console.log(passwordLength)
+  } else {
+    alert("Must be a value between 8 - 128.")
+    generatePassword()
+  } ;  
 
-    if (passwordLength < 8 || passwordLength > 128 || isNaN(passwordLength)) {
-      alert("Password length must be a numerical value between 8 - 128 digits. Please re-submit.");
-      return false;
-    }
-    //okay=T / cancel=F responses stored in result
-    if (confirm("Would you like special characters in your password?")) {
-      result = result.concat(specialCharacters);
-    }
-    if (confirm("Would you like numbers in your password?")) {
-      result = result.concat(numericCharacters);
-    }
-    if (confirm("Would you like uppercase letters in your password?")) {
-      result = result.concat(lowerCasedCharacters);
-    }
-    if (confirm("Would you like lowercase letters in your password?")) {
-      result = result.concat(upperCasedCharacters);
-    }   
-    return true;
+  //other password criterias
+  
+
+
+  // // Array to store result 
+  // var result = [];
+  // // Array to store types of characters to include in password
+  // var possibleCharacters = [];
+  // // Array to contain one of each type of chosen character to ensure each will be used
+  // var guaranteedCharacters = [];
+  
 }
 
 // Get references to the #generate element
