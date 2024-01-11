@@ -59,7 +59,7 @@ function generatePassword() {
     var randomPassword = "";
     for (let i = 0; i < passwordLength; i++) {
     randomPassword += guaranteedCharacters[Math.floor(Math.random()*guaranteedCharacters.length)];    
-    } 
+    };
     return randomPassword;
   } else {
     alert("Must be a value between 8 - 128.")
