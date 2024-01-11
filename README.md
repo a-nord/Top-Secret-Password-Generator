@@ -42,4 +42,4 @@ THEN the password is either displayed in an alert or written to the page</li>
 <img src="./images/password_gen.PNG" alt="Screenshot of the password.">
 <a href="https://a-nord.github.io/Top-Secret-Password-Generator/">💖Top Secret Generator💖</a>
 <a href="https://github.com/a-nord/Top-Secret-Password-Generator">💖Ashley Nord's Repository💖</a>
-*SN: Starter code was given by professor. Code was helped by John Coakley (tutor) and TA*
+*SN: Starter code was given by professor. Code was helped by John Coakley (tutor) and Mary Elenius (TA)*
