@@ -38,7 +38,8 @@ THEN the password is either displayed in an alert or written to the page</li>
 <h2>Preview</h2>
 <p>The following animation shows the web application's appearance and functionality:
 </p>
-<img src="./assets/images/preview.PNG" alt="Gif of the page that viewers should see with header, links and a preview of the content of the website.">
+<img src="./images/password_gen (1).gif" alt="Gif of the page that viewers should see with prompts.">
+<img src="./images/password_gen.PNG" alt="Screenshot of the password.">
 <a href="https://a-nord.github.io/Top-Secret-Password-Generator/">💖Top Secret Generator💖</a>
 <a href="https://github.com/a-nord/Top-Secret-Password-Generator">💖Ashley Nord's Repository💖</a>
-*SN: Code was given by professor. Code was helped by John Coakley (tutor) and TA*
+*SN: Starter code was given by professor. Code was helped by John Coakley (tutor) and TA*
